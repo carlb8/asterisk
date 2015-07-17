@@ -2827,7 +2827,6 @@ static int xmpp_client_authenticating(struct ast_xmpp_client *client, struct ast
 {
 	int features;
 	
-	fetch_access_token(cfg);
 	if (!strcmp(iks_name(node), "success")) {
 		/* Authentication was a success, yay! */
 		xmpp_send_stream_header(client, cfg, client->jid->server);
